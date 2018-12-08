@@ -16,7 +16,7 @@ public class Test1Steps {
 	public String[] initList;
 	public String[] sortedList;
 	
-	@Before
+	@Before("@Test1")
 	public void tearUp() {
 		LogIT.startTestCase("TestCase1 - Verify Product Sort");
 		LogIT.info("Getting Things Ready!");
@@ -25,7 +25,7 @@ public class Test1Steps {
 		mobile = index.clickMobileLink();
 	}
 	
-	@After
+	@After("@Test1")
 	public void tearDown() {
 		LogIT.info("Closing the current Browser Session");
 		BasePage.closeSession();
