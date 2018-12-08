@@ -1,0 +1,20 @@
+2018-12-08 12:17:39,401  INFO [main] LogIT:13 - ****************************************************************************************
+2018-12-08 12:17:39,411  INFO [main] LogIT:15 - ****************************************************************************************
+2018-12-08 12:17:39,412  INFO [main] LogIT:17 - $$$$$$$$$$$$$$$$$$$$$                 TestCase1 - Verify Product Sort       $$$$$$$$$$$$$$$$$$$$$$$$$
+2018-12-08 12:17:39,413  INFO [main] LogIT:19 - ****************************************************************************************
+2018-12-08 12:17:39,414  INFO [main] LogIT:21 - ****************************************************************************************
+2018-12-08 12:17:39,415  INFO [main] LogIT:45 - Getting Things Ready!
+2018-12-08 12:17:39,422  INFO [main] LogIT:45 - Loading config file
+2018-12-08 12:17:39,424  INFO [main] LogIT:45 - Choosing the browser
+2018-12-08 12:17:43,448  INFO [main] LogIT:45 - Setting up driver properties nad timeouts
+2018-12-08 12:17:44,783  INFO [main] LogIT:45 - Navigating to the given URL
+2018-12-08 12:17:50,291  INFO [main] LogIT:45 - Fetching intitial Product List
+2018-12-08 12:17:50,428  INFO [main] LogIT:45 - Sorting the products by name
+2018-12-08 12:17:51,474  INFO [main] LogIT:45 - Fetching the sorted Product List
+2018-12-08 12:17:51,575  INFO [main] LogIT:45 - Verifying that Products have been sorted by Name
+2018-12-08 12:17:51,580  INFO [main] LogIT:45 - Closing the current Browser Session
+2018-12-08 12:17:52,470  INFO [main] LogIT:29 - XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX
+2018-12-08 12:17:52,472  INFO [main] LogIT:31 - X
+2018-12-08 12:17:52,473  INFO [main] LogIT:33 - X
+2018-12-08 12:17:52,473  INFO [main] LogIT:35 - X
+2018-12-08 12:17:52,474  INFO [main] LogIT:37 - X
