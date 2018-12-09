@@ -6,6 +6,7 @@ import com.pages.XperiaPage;
 import com.utility.BasePage;
 import com.utility.LogIT;
 
+import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -26,6 +27,12 @@ public class Test2Steps {
 		index = new IndexPage();
 		LogIT.info("Clicking on Mobile lik");
 		mobile = index.clickMobileLink();
+	}
+	
+	@After("@Test2")
+	public void tearDown() {
+		LogIT.info("Closing current browser session");
+		BasePage.closeSession();
 	}
 	
 	@When("^Get price of Xperia on List Page$")

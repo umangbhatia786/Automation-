@@ -25,6 +25,9 @@ public class MobilePage extends BasePage{
 	@FindBy(xpath = "//h2[@class='product-name']/a")
 	List<WebElement> productList;
 	
+	@FindBy(xpath="//*[@id=\"top\"]/body/div/div/div[2]/div/div[2]/div[1]/div[3]/ul/li[1]/div/div[3]/button")
+	WebElement addToCartBtn;
+	
 	
 	public MobilePage() {
 		PageFactory.initElements(driver, this);
@@ -59,5 +62,10 @@ public class MobilePage extends BasePage{
 	public XperiaPage clickXperiaImg() {
 		xperiaImg.click();
 		return new XperiaPage();
+	}
+	
+	public ShoppingCartPage addToCart() {
+		addToCartBtn.click();
+		return new ShoppingCartPage();
 	}
 }
