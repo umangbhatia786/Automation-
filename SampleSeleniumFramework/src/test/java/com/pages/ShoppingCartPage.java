@@ -15,7 +15,7 @@ public class ShoppingCartPage extends BasePage {
 	@FindBy(xpath="//*[@id=\"shopping-cart-table\"]/tbody/tr/td[4]/input")
 	WebElement qtyBox;
 	
-	@FindBy(name="update_cart_action")
+	@FindBy(xpath="//*[@id=\"shopping-cart-table\"]/tbody/tr/td[4]/button")
 	WebElement updateBtn;
 	
 	@FindBy(xpath="//*[@id=\"shopping-cart-table\"]/tbody/tr/td[2]/p")
@@ -34,8 +34,8 @@ public class ShoppingCartPage extends BasePage {
 	public void updateQty(String qty) throws InterruptedException {
 		qtyBox.click();
 		qtyBox.clear();
-		Thread.sleep(1000);
 		qtyBox.sendKeys(qty);
+		Thread.sleep(2000);
 		updateBtn.click();
 		
 	}
