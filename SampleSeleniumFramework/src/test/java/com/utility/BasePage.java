@@ -9,6 +9,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class BasePage {
 	
 	public static WebDriver driver;
@@ -30,18 +32,22 @@ public class BasePage {
 		LogIT.info("Choosing the browser");
 		String browser = prop.getProperty("browser");
 		if(browser.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver","src\\test\\resources\\Drivers\\chromedriver.exe");
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		}
 		
 		else if(browser.equalsIgnoreCase("firefox")) {
-			System.setProperty("webdriver.gecko.driver","src\\test\\resources\\Drivers\\geckodriver.exe");
+			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		}
 		
 		else if(browser.equalsIgnoreCase("edge")) {
-			System.setProperty("webdriver.edge.driver","src\\test\\resources\\Drivers\\MicrosoftWebDriver.exe");
+			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
+		}
+		
+		else if(browser.equalsIgnoreCase("IE")) {
+			WebDriverManager.iedriver().setup();
 		}
 		
 		LogIT.info("Setting up driver properties nad timeouts");
@@ -54,6 +60,16 @@ public class BasePage {
 	
 	public static void closeSession() {
 		driver.quit();
+	}
+	
+	public static void switchWindow() {
+		for(String handle:driver.getWindowHandles()) {
+			driver.switchTo().window(handle);
+		}
+	}
+	
+	public static String getTitle() {
+		return driver.getTitle();
 	}
 	
 }
