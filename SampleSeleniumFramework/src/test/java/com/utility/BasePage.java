@@ -66,6 +66,7 @@ public class BasePage {
 		for(String handle:driver.getWindowHandles()) {
 			driver.switchTo().window(handle);
 		}
+		driver.manage().window().maximize();
 	}
 	
 	public static String getTitle() {

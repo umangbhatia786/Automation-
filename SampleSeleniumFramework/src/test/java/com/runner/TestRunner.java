@@ -11,11 +11,13 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources/Features", 
+@CucumberOptions(features = "src/test/resources/Features/Test5.feature", 
                  glue = { "com.stepDefinition" }, 
                  plugin = { "html:target/TestResults/cucumber-html-report",
-		"pretty:target/TestResults/cucumber-pretty.txt", "usage:target/TestResults/cucumber-usage.json",
-		"junit:target/TestResults/cucumber-results.xml","com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:target/TestResults/Extent-Report.html"}, 
+                		 	"pretty:target/TestResults/cucumber-pretty.txt", "usage:target/TestResults/cucumber-usage.json",
+                		 	"junit:target/TestResults/cucumber-results.xml",
+							"com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:target/TestResults/Extent-Report.html",
+							"rerun:target/rerun.txt"}, 
                  dryRun = false, 
                  monochrome = true, 
                  strict = true)
