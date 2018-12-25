@@ -101,11 +101,13 @@ public class MobilePage extends BasePage {
 		compareBtn.click();
 	}
 	
-	@SuppressWarnings({ "deprecation", "unlikely-arg-type" })
-	public void verifyCompareWindow() {
-		MobilePage.switchWindow();
+	
+	public void verifyCompareWindow() throws InterruptedException {
+		LogIT.info("Switiching to Compare Window");
+		BasePage.switchWindow();
+		Thread.sleep(3000);
 		LogIT.info("Verifying Title of the Compare Window");
-		assert1.assertThat(MobilePage.getTitle()).equals(Utility.COMPARE_WINDOW_TITLE);
+		assert1.assertThat(MobilePage.getTitle()).isEqualToIgnoringCase(Utility.COMPARE_WINDOW_TITLE);
 		LogIT.info("Verifying that Xperia Tag is displayed");
 		assert1.assertThat(xperiaTag.isDisplayed()).isTrue();
 		LogIT.info("Verifying that iPhone tag is displayed");

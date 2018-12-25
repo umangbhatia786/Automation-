@@ -17,7 +17,7 @@ public class Test3Steps {
 	public MobilePage mobile;
 	public ShoppingCartPage cart;
 
-	@Before
+	@Before("@Test3")
 	public void tearUp() {
 		LogIT.startTestCase("TestCase3 - Verify Quantity Update");
 		LogIT.info("Getting Things Ready!");
@@ -27,7 +27,7 @@ public class Test3Steps {
 		mobile = index.clickMobileLink();
 	}
 
-	@After
+	@After("@Test3")
 	public void tearDown() {
 		LogIT.info("Closing current browser session");
 		BasePage.closeSession();
